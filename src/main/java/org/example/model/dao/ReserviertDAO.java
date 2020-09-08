@@ -4,7 +4,6 @@ import org.example.process.control.exceptions.DatabaseException;
 import org.example.model.objects.Auto;
 import org.example.model.objects.Kunde;
 import org.example.model.objects.Reservierung;
-import org.example.model.objects.User;
 import org.example.DatabaseConnection;
 
 import java.sql.Date;
@@ -16,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+//
 
 public class ReserviertDAO extends AbstractDAO {
     private static ReserviertDAO reserviertDAO;
