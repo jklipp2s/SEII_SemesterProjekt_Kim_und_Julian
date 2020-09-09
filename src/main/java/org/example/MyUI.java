@@ -28,6 +28,7 @@ public class MyUI extends UI {
 
         Navigator navigator = new Navigator(this,this);
         navigator.addView(Views.LANDINGPAGE, LandingPage.class);
+        navigator.addView(Views.LOGINPAGE, LoginPage.class);
 
 
         getCurrent().getNavigator().navigateTo(Views.LANDINGPAGE);

@@ -4,6 +4,7 @@ import com.vaadin.icons.VaadinIcons;
 import com.vaadin.server.ThemeResource;
 import com.vaadin.ui.*;
 import org.example.gui.views.pages.*;
+import org.example.util.Views;
 
 public class Header extends HorizontalLayout {
 
@@ -50,12 +51,31 @@ public class Header extends HorizontalLayout {
         Button loginButton = new Button(VaadinIcons.USER);
         loginButton.setStyleName("loginbutton");
 
+        loginButton.addStyleName(UI.getCurrent().getNavigator().getCurrentView().getClass().equals(LoginPage.class) ?
+                "orangebutton" : "");
+
+
 
 
         section2.addComponents(homeButton, fahrzeugeButton, kontaktButton, sucheButton, loginButton);
 
 
         this.addComponents(section1, section2);
+
+
+        UI ui = UI.getCurrent();
+
+
+        loginButton.addClickListener(clickEvent -> {
+
+
+                ui.getNavigator().navigateTo(Views.LOGINPAGE);
+
+
+
+        });
+
+
 
     }
 
