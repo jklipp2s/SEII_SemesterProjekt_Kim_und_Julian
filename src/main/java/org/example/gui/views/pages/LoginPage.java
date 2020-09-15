@@ -5,6 +5,7 @@ import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.ThemeResource;
 import com.vaadin.ui.*;
+import org.example.control.LoginControl;
 import org.example.gui.views.components.MyTextField;
 import org.example.process.control.exceptions.DatabaseException;
 import org.example.gui.views.components.Footer;
@@ -75,6 +76,31 @@ public class LoginPage extends VerticalLayout implements View {
         this.addComponent(regFooter);
 
 
+        // LOGIC
+
+        login.addClickListener(clickEvent -> {
+
+            try {
+
+
+                LoginControl.authenticate(email.getTextField().getValue(), password.getTextField().getValue());
+                // Weiter zum Profil
+            } catch (DatabaseException e) {
+                resetFields();
+                Notification.show(null, e.getReason(), Notification.Type.ERROR_MESSAGE);
+            }
+
+        });
+
+
+    }
+
+
+    public void resetFields(){
+        this.email.getTextField().clear();
+        this.email.attachPlaceHolder();
+        this.password.getTextField().clear();
+        this.password.attachPlaceHolder();
     }
 
 

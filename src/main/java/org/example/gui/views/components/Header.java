@@ -67,14 +67,9 @@ public class Header extends HorizontalLayout {
 
 
         loginButton.addClickListener(clickEvent -> {
-
-
                 ui.getNavigator().navigateTo(Views.LOGINPAGE);
-
-
-
         });
-//gt
+
     }
 
 }

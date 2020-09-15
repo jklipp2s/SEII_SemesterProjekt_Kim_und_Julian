@@ -61,9 +61,14 @@
     content: none !important;
   }
 
-  .v-slot-homebutton, .v-slot-fahrzeugebutton,
-  .v-slot-kontaktbutton, .v-slot-loginbutton, .v-slot-suchebutton {
-    width: 20%;
+  .v-slot-homebutton, .v-slot-kontaktbutton,
+  .v-slot-loginbutton, .v-slot-suchebutton {
+    width: 19%;
+  }
+
+  .v-slot-fahrzeugebutton {
+    width: 24%;
+    min-width: fit-content;
   }
 
 
