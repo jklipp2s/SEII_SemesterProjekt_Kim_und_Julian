@@ -22,7 +22,7 @@ public class LandingPage extends VerticalLayout implements View {
         this.setSizeFull();
 
         this.addComponent(new Header());
-
+        this.setStyleName("landing");
 
         HorizontalLayout horizontalLayout = new HorizontalLayout();
         horizontalLayout.addStyleName("landingpage_middle");
@@ -63,6 +63,12 @@ public class LandingPage extends VerticalLayout implements View {
 
         this.addComponent(new Footer());
 
+
+        // LOGIK
+
+        regButton.addClickListener(clickEvent -> {
+            UI.getCurrent().getNavigator().navigateTo(Views.REGISTERPAGE);
+        });
 
 
     }

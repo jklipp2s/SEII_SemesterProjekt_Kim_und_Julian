@@ -3,7 +3,10 @@ package org.example.gui.views.components;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.server.ThemeResource;
 import com.vaadin.ui.*;
+import org.example.control.LoginControl;
 import org.example.gui.views.pages.*;
+import org.example.gui.views.pages.RegisterPage;
+import org.example.util.Roles;
 import org.example.util.Views;
 
 public class Header extends HorizontalLayout {
@@ -29,6 +32,8 @@ public class Header extends HorizontalLayout {
 
         Button homeButton = new Button("Home");
         homeButton.setStyleName("homebutton");
+        homeButton.addStyleName(UI.getCurrent().getNavigator().getCurrentView().getClass().equals(LandingPage.class) ||
+                UI.getCurrent().getNavigator().getCurrentView().getClass().equals(ProfilePage.class) ? "orangebutton" : "");
 
 
 
@@ -48,11 +53,12 @@ public class Header extends HorizontalLayout {
         Button sucheButton = new Button("Suche");
         sucheButton.setStyleName("suchebutton");
 
-        Button loginButton = new Button(VaadinIcons.USER);
+        Button loginButton = new Button(LoginControl.isLoggedIn() ? VaadinIcons.POWER_OFF : VaadinIcons.USER);
         loginButton.setStyleName("loginbutton");
 
-        loginButton.addStyleName(UI.getCurrent().getNavigator().getCurrentView().getClass().equals(LoginPage.class) ?
-                "orangebutton" : "");
+        loginButton.addStyleName(UI.getCurrent().getNavigator().getCurrentView().getClass().equals(LoginPage.class) ||
+                UI.getCurrent().getNavigator().getCurrentView().getClass().equals(RegisterPage.class)
+                ? "orangebutton" : "");
 
 
 
@@ -63,11 +69,23 @@ public class Header extends HorizontalLayout {
         this.addComponents(section1, section2);
 
 
-        UI ui = UI.getCurrent();
+        // LOGIK
 
+        UI ui = UI.getCurrent();
+        homeButton.addClickListener(clickEvent -> {
+            if (ui.getSession().getAttribute(Roles.CURRENT_USER) != null)
+                ui.getNavigator().navigateTo(Views.PROFILEPAGE);
+            else
+                ui.getNavigator().navigateTo(Views.LANDINGPAGE);
+        });
 
         loginButton.addClickListener(clickEvent -> {
+
+            if (ui.getSession().getAttribute(Roles.CURRENT_USER) != null)
+                LoginControl.logout();
+            else
                 ui.getNavigator().navigateTo(Views.LOGINPAGE);
+
         });
 
     }

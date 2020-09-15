@@ -2,7 +2,9 @@ package org.example.gui.views.components;
 
 import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
-
+import com.vaadin.ui.UI;
+import org.example.gui.views.pages.LoginPage;
+import org.example.gui.views.pages.RegisterPage;
 
 
 public class Footer extends HorizontalLayout {
@@ -38,7 +40,11 @@ public class Footer extends HorizontalLayout {
         middle.addComponent(editedBy);
 
 
-        this.addComponents(left,middle,right);
+        this.addComponents(left,middle);
+
+        if(!(UI.getCurrent().getNavigator().getCurrentView().getClass().equals(RegisterPage.class) ||
+                UI.getCurrent().getNavigator().getCurrentView().getClass().equals(LoginPage.class)))
+            this.addComponent(right);
 
     }
 

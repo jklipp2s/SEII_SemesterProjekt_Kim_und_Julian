@@ -10,6 +10,7 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.UI;
 import org.example.gui.views.pages.*;
+import org.example.gui.views.pages.RegisterPage;
 import org.example.util.Views;
 
 /**
@@ -29,6 +30,8 @@ public class MyUI extends UI {
         Navigator navigator = new Navigator(this,this);
         navigator.addView(Views.LANDINGPAGE, LandingPage.class);
         navigator.addView(Views.LOGINPAGE, LoginPage.class);
+        navigator.addView(Views.REGISTERPAGE, RegisterPage.class);
+        navigator.addView(Views.PROFILEPAGE, ProfilePage.class);
 
 
         getCurrent().getNavigator().navigateTo(Views.LANDINGPAGE);

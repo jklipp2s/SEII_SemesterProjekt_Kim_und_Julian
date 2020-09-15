@@ -33,7 +33,7 @@ public class LoginPage extends VerticalLayout implements View {
 
 
         HorizontalLayout horizontalLayout = new HorizontalLayout();
-        horizontalLayout.addStyleName("landingpage_middle");
+        horizontalLayout.addStyleName("landingpage_middle loginpage");
         VerticalLayout verticalLayout = new VerticalLayout();
         verticalLayout.setSizeFull();
         verticalLayout.addStyleName("registerpage_middle_right");
@@ -76,21 +76,23 @@ public class LoginPage extends VerticalLayout implements View {
         this.addComponent(regFooter);
 
 
-        // LOGIC
-
-        login.addClickListener(clickEvent -> {
-
-            try {
+        // LOGIK
 
 
-                LoginControl.authenticate(email.getTextField().getValue(), password.getTextField().getValue());
-                // Weiter zum Profil
-            } catch (DatabaseException e) {
-                resetFields();
-                Notification.show(null, e.getReason(), Notification.Type.ERROR_MESSAGE);
-            }
+            login.addClickListener(clickEvent -> {
 
-        });
+                try {
+
+                    LoginControl.authenticate(email.getTextField().getValue(), password.getTextField().getValue());
+                    UI.getCurrent().getNavigator().navigateTo(Views.PROFILEPAGE);
+                } catch (DatabaseException e) {
+                    resetFields();
+                    Notification.show(null, e.getReason(), Notification.Type.ERROR_MESSAGE);
+                }
+
+            });
+
+
 
 
     }

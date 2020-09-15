@@ -31,7 +31,7 @@ public class LoginControl {
 
     public static void logout(){
         UI.getCurrent().getSession().close();
-        UI.getCurrent().getPage().setLocation("/carlookltd_war_exploded");
+        UI.getCurrent().getPage().setLocation("/SEII_Projekt_Julian_und_Kim_war_exploded");
     }
 
 
