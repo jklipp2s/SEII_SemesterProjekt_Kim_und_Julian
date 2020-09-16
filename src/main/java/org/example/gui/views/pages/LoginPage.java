@@ -5,7 +5,7 @@ import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.ThemeResource;
 import com.vaadin.ui.*;
-import org.example.control.LoginControl;
+import org.example.process.control.LoginControl;
 import org.example.gui.views.components.MyTextField;
 import org.example.process.control.exceptions.DatabaseException;
 import org.example.gui.views.components.Footer;

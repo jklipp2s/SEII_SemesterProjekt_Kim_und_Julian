@@ -156,7 +156,8 @@
     margin-top: 5vh;
   }
 
-  .profilepage .v-slot-footer_middle, .landing .v-slot-footer_middle {
+  .profilepage .v-slot-footer_middle, .landing .v-slot-footer_middle,
+  .contactpage .v-slot-footer_middle, .carpage .v-slot-footer_middle {
     width: 60% !important;
     margin-top: 5vh;
   }
@@ -230,7 +231,9 @@
     box-shadow: 0 0 36px grey;
   }
 
-  .v-slot-landingpage_middle_right, .landingpage_middle_right, .v-horizontallayout-footer_left, .v-slot-registerpage_middle_right, .registerpage_middle_right {
+  .v-slot-landingpage_middle_right, .landingpage_middle_right,
+  .v-horizontallayout-footer_left, .v-slot-registerpage_middle_right,
+  .registerpage_middle_right {
     width: 100%;
     height: 100%;
   }
@@ -376,9 +379,6 @@
 
 
 
-  .registerpage .v-slot-footer_right, .searchpage .v-slot-footer_left {
-    background-color: transparent !important;
-  }
 
 
   .v-caption-user_pic {
@@ -475,6 +475,207 @@
     font-weight: bold;
     color: grey;
   }
+
+
+
+
+  .contactpage .v-slot-centered_p {
+    height: 611px !important;
+  }
+
+
+  .layout_contact {
+    margin-left: 23vh;
+    margin-top: 3vh;
+  }
+
+  .fach {
+    font-size: 33px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+  .prof {
+    font-size: 25px;
+    margin-top: -11px;
+  }
+
+  .sem {
+    font-size: 22px;
+    margin-top: -9px;
+  }
+
+  .kontakt {
+    margin-top: 4vh;
+    font-size: 30px;
+    line-height: 1.2;
+    font-weight: bolder;
+  }
+
+  .v-slot-kontakt {
+    border-bottom: gray 2px solid;
+    width: 110.3vh;
+  }
+
+  .contactpage .v-slot-centered_p .v-spacing {
+    display: none !important;
+  }
+
+  .name1, .name2 {
+    font-size: 30px;
+    margin-top: 4vh;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+
+  .mn1, .mn2 {
+    font-size: 21px;
+    width: 46vh;
+    text-align: end;
+    padding: 10px;
+    background: rgb(238, 238, 238);
+  }
+
+
+  .contactlabel {
+    position: absolute;
+    left: 50vh;
+    top: 6vh;
+    font-size: 50px;
+    font-weight: bold;
+    color: grey;
+  }
+
+  .v-slot-layout_contact {
+    height: 658px;
+  }
+
+
+
+   .v-slot-centered_p {
+    height: 665px !important;
+    width: 100%;
+  }
+
+  .v-window {
+    width: fit-content;
+  }
+
+
+  .v-slot-carpage_middle, .contactpage .v-slot-centered_p {
+    height: 582px !important;
+    width: 100%;
+  }
+
+
+  .v-slot-quad {
+    background: #ECECEC;
+    width: 600px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    //justify-content: center;
+    border: 1px dimgray solid;
+    box-shadow: 0 0 20px dimgrey;
+  }
+
+
+  .v-slot-carpage_middle {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .quaderbutton {
+    background: black;
+    width: 35px;
+    height: 35px;
+  }
+
+
+  .quaderbutton:hover {
+    background: rgba(0, 0, 0, .6);
+    color: rgba(0, 0, 0, .6);
+
+  }
+
+
+  .quaderbutton .v-button-wrap {
+    line-height: 1.7;
+    margin-left: 40px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+
+  .quad {
+    margin-left: 20.5vh;
+  }
+
+
+  .v-slot-quaderbutton + .v-spacing + .v-slot-quaderbutton {
+    margin-top: 20px;
+  }
+
+
+  .inserierebutton {
+    line-height: 2;
+    background: #dadada;
+    margin-top: 10px;
+  }
+
+  .v-textarea {
+    margin-top: 23px;
+    font-size: 20px;
+
+  }
+
+  .inserierewindow {
+    padding: 2px 40px 9px 40px;
+  }
+
+
+  .v-slot-carpage_middle_hitlist, .carpage_middle_hitlist {
+    height: 578px !important;
+  }
+
+
+  .mytheme .v-slot-carpage_middle_hitlist, .carpage_middle_hitlist, .v-slot-autogrid, .autogrid {
+    width: (-webkit-fill-available) !important;
+  }
+
+  .autogrid .v-grid-column-default-header-content {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+
+  .autogrid {
+    position: fixed;
+    left: 0;
+    max-height: 665px !important;
+    overflow-x: hidden !important;
+
+  }
+
+
+  .carbutton, .carbutton:hover:after {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    font-size: 23px;
+    color: black;
+    line-height: 1 !important;
+  }
+
+  .v-slot-carbutton, .carbutton {
+    width: 0;
+    height: 0;
+  }
+
+
+
+
 
 
 

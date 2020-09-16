@@ -3,7 +3,7 @@ package org.example.gui.views.components;
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.server.ThemeResource;
 import com.vaadin.ui.*;
-import org.example.control.LoginControl;
+import org.example.process.control.LoginControl;
 import org.example.gui.views.pages.*;
 import org.example.gui.views.pages.RegisterPage;
 import org.example.util.Roles;
@@ -48,6 +48,8 @@ public class Header extends HorizontalLayout {
 
         Button kontaktButton = new Button("Kontakt");
         kontaktButton.setStyleName("kontaktbutton");
+        kontaktButton.addStyleName(UI.getCurrent().getNavigator().getCurrentView().getClass().equals(ContactPage.class)
+                ? "orangebutton" : "");
 
 
         Button sucheButton = new Button("Suche");
@@ -87,6 +89,16 @@ public class Header extends HorizontalLayout {
                 ui.getNavigator().navigateTo(Views.LOGINPAGE);
 
         });
+
+        kontaktButton.addClickListener(clickEvent -> {
+            ui.getNavigator().navigateTo(Views.CONTACTPAGE);
+        });
+
+
+        fahrzeugeButton.addClickListener(clickEvent -> {
+            ui.getNavigator().navigateTo(Views.CARPAGE);
+        });
+
 
     }
 
