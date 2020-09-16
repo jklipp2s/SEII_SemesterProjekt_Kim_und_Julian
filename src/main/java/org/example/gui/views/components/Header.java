@@ -42,6 +42,9 @@ public class Header extends HorizontalLayout {
 
         Button fahrzeugeButton = new Button("Fahrzeuge");
         fahrzeugeButton.setStyleName("fahrzeugebutton");
+        fahrzeugeButton.addStyleName(UI.getCurrent().getNavigator().getCurrentView().getClass().equals(CarPage.class)
+                ? "orangebutton" : "");
+
 
 
 
@@ -49,18 +52,21 @@ public class Header extends HorizontalLayout {
         Button kontaktButton = new Button("Kontakt");
         kontaktButton.setStyleName("kontaktbutton");
         kontaktButton.addStyleName(UI.getCurrent().getNavigator().getCurrentView().getClass().equals(ContactPage.class)
-                ? "orangebutton" : "");
+                ? "orangebutton" : "");;
 
 
         Button sucheButton = new Button("Suche");
         sucheButton.setStyleName("suchebutton");
+        sucheButton.addStyleName(UI.getCurrent().getNavigator().getCurrentView().getClass().equals(SearchPage.class)
+                ? "orangebutton" : "");
 
         Button loginButton = new Button(LoginControl.isLoggedIn() ? VaadinIcons.POWER_OFF : VaadinIcons.USER);
         loginButton.setStyleName("loginbutton");
-
         loginButton.addStyleName(UI.getCurrent().getNavigator().getCurrentView().getClass().equals(LoginPage.class) ||
                 UI.getCurrent().getNavigator().getCurrentView().getClass().equals(RegisterPage.class)
                 ? "orangebutton" : "");
+
+
 
 
 
@@ -97,6 +103,10 @@ public class Header extends HorizontalLayout {
 
         fahrzeugeButton.addClickListener(clickEvent -> {
             ui.getNavigator().navigateTo(Views.CARPAGE);
+        });
+
+        sucheButton.addClickListener(clickEvent -> {
+            ui.getNavigator().navigateTo(Views.SEARCHPAGE);
         });
 
 

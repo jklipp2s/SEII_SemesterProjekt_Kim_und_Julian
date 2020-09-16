@@ -7,4 +7,5 @@ public class Views {
     public static final String PROFILEPAGE = "profile";
     public static final String CONTACTPAGE = "contact";
     public static final String CARPAGE = "carpage";
+    public static final String SEARCHPAGE = "searchpage";
 }

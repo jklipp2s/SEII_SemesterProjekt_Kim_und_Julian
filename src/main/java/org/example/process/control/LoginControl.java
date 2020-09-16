@@ -6,6 +6,7 @@ import org.example.process.control.exceptions.DatabaseException;
 import org.example.model.objects.*;
 import org.example.model.dao.*;
 import org.example.util.Roles;
+import org.example.util.Views;
 
 public class LoginControl {
 
@@ -31,7 +32,7 @@ public class LoginControl {
 
     public static void logout(){
         UI.getCurrent().getSession().close();
-        UI.getCurrent().getPage().setLocation("/SEII_SemesterProjekt_Kim_und_Julian_war_exploded");
+        UI.getCurrent().getPage().setLocation(Views.LANDINGPAGE);
     }
 
 

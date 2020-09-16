@@ -143,6 +143,67 @@ public class AutoDAO extends AbstractDAO {
 
 
 
+    /**
+     * Suchmethode für die ON-THE-FLY-Suche
+     * @param marke
+     * @param preis
+     * @param baujahr
+     * @param ps
+     * @param eigenschaften
+     * @return
+     * @throws DatabaseException
+     */
+
+    public List<Auto> searchCars(String marke, double preis, int baujahr, double ps, String eigenschaften) throws DatabaseException {
+        ResultSet resultSet = null;
+        Statement statement = getStatement();
+        List<Auto> autoList = new ArrayList<>();
+
+
+
+
+        String markeSearch = " marke ILIKE '%" + marke + "%'\n";
+        String preisSearch = " preis <=" + preis + "";
+        String baujahrSearch = " baujahr >= " + baujahr + "";
+        String psSearch = " ps <= " + ps + "";
+        String eigenschaftenSearch = " beschreibung ILIKE '%" + eigenschaften + "%'\n";
+
+
+        String sqlBefehl = marke.isEmpty() && preis == 0 && baujahr == 0 && ps == 0 && eigenschaften.isEmpty() ? "SELECT * FROM " + table : "SELECT * FROM " + table + " s where ";
+
+        if (!marke.isEmpty()) sqlBefehl +=  markeSearch;
+        if (preis != 0)
+            sqlBefehl +=  marke.isEmpty() ? preisSearch : " and " + preisSearch;
+        if (baujahr != 0)
+            sqlBefehl += marke.isEmpty() && preis == 0 ? baujahrSearch : " and " + baujahrSearch;
+        if (ps != 0) sqlBefehl += marke.isEmpty() && preis == 0 && baujahr == 0 ? psSearch : " and " + psSearch;
+        if (!eigenschaften.isEmpty()) sqlBefehl += marke.isEmpty() && preis == 0 && baujahr == 0 && ps == 0 ? eigenschaftenSearch : " and " + eigenschaftenSearch;
+        sqlBefehl += ";";
+        try {
+
+            resultSet = statement.executeQuery(sqlBefehl);
+
+            while (resultSet.next()) {
+                autoList.add(setAuto(resultSet));
+            }
+
+
+        }
+        catch (SQLException e) {
+            Logger.getLogger(AutoDAO.class.getName()).log(Level.SEVERE, null, e);
+            System.out.println(sqlBefehl);
+
+        } finally {
+            DatabaseConnection.getInstance().closeConnection();
+
+        }
+
+        return autoList;
+    }
+
+
+
+
     // Helpermethode
     private Auto setAuto(ResultSet resultSet) throws SQLException {
         Auto auto = new Auto();

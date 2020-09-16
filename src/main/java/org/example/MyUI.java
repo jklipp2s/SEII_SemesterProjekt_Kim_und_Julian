@@ -34,6 +34,7 @@ public class MyUI extends UI {
         navigator.addView(Views.PROFILEPAGE, ProfilePage.class);
         navigator.addView(Views.CONTACTPAGE, ContactPage.class);
         navigator.addView(Views.CARPAGE, CarPage.class);
+        navigator.addView(Views.SEARCHPAGE, SearchPage.class);
 
 
 

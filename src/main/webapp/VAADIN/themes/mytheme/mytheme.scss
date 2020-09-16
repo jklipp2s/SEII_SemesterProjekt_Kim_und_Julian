@@ -157,7 +157,8 @@
   }
 
   .profilepage .v-slot-footer_middle, .landing .v-slot-footer_middle,
-  .contactpage .v-slot-footer_middle, .carpage .v-slot-footer_middle {
+  .contactpage .v-slot-footer_middle, .carpage .v-slot-footer_middle,
+  .searchpage .v-slot-footer_middle {
     width: 60% !important;
     margin-top: 5vh;
   }
@@ -172,7 +173,10 @@
   }
 
 
-  .v-slot-landingpage_middle + .v-spacing, .v-slot-header + .v-spacing, .v-slot-footer_middle + .v-spacing, .v-slot-titlecar + .v-spacing {
+  .v-slot-landingpage_middle + .v-spacing,
+  .v-slot-header + .v-spacing,
+  .v-slot-footer_middle + .v-spacing,
+  .v-slot-titlecar + .v-spacing {
     height: 0;
     width: 0;
   }
@@ -675,8 +679,222 @@
 
 
 
+  .v-slot-carpage_middle_hitlist, .carpage_middle_hitlist {
+    height: 578px !important;
+  }
 
 
+  .mytheme .v-slot-carpage_middle_hitlist, .carpage_middle_hitlist, .v-slot-autogrid, .autogrid {
+    width: (-webkit-fill-available) !important;
+  }
+
+  .autogrid .v-grid-column-default-header-content {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+
+  .autogrid {
+    position: fixed;
+    left: 0;
+    max-height: 665px !important;
+    overflow-x: hidden !important;
+
+  }
+
+
+  .carbutton, .carbutton:hover:after {
+    width: 0;
+    height: 0;
+    background-color: transparent;
+    font-size: 23px;
+    color: black;
+    line-height: 1 !important;
+  }
+
+  .v-slot-carbutton, .carbutton {
+    width: 0;
+    height: 0;
+  }
+
+
+  .v-filterselect-input {
+    font-size: 20px !important;
+    font-weight: bold !important;
+  }
+
+
+  .genderselectbutton {
+    margin-top: 34px;
+  }
+
+
+
+  .v-datefield-button {
+    height: 55px !important;
+    font-size: 25px !important;
+  }
+
+
+  .v-datefield-textfield {
+    height: 55px !important;
+    width: 452px !important;
+    font-size: 20px !important;
+  }
+
+
+
+
+  .searchpage .v-slot-centered_p {
+    background: url("img/searchpage.jpg") 0 -355px !important;
+    background-size: cover !important;
+    //-webkit-filter: blur(1.5px) !important;
+    opacity: 0.8;
+
+  }
+
+  .searchpage .v-spacing {
+    display: none;
+  }
+
+
+  .searchpage .ml {
+    margin: 15px 0 0 50px;
+  }
+
+
+
+
+  .searchpage .v-slot-centered_p, .centered_p {
+    height: 68vh !important;
+    width: 100%;
+  }
+
+
+  .searchpage .v-slot-centered_p, .searchpage .centered_p,
+  .contactpage .centered_p .v-verticallayout {
+    width: 100% !important;
+  }
+
+
+  .searchpage .centered_p {
+    display: table !important;
+
+  }
+
+
+  .v-slot-searchpage_left {
+    display: table-cell !important;
+    width: 550px;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+    font-weight: bold;
+    color: #ECECEC;
+
+  }
+
+  .searchpage_autogrid, .searchpage_autogrid .v-grid-tablewrapper, .searchpage_right, .v-slot-searchpage_autogrid {
+    width: 100% !important;
+
+  }
+
+  .v-slot-searchpage_right {
+    display: table-cell !important;
+    background: rgba(0, 0, 0, .5) !important;
+  }
+
+
+  .searchpage_autogrid td, .searchpage_autogrid th, .searchpage_autogrid thead, .searchpage .v-grid-tablewrapper, .searchpage_autogrid {
+
+    background: rgba(0, 0, 0, 0) !important;
+    backdrop-filter: blur(2px);
+    color: white !important;
+    border: none;
+  }
+
+  .searchpage_autogrid .v-icon {
+    color: orange;
+  }
+
+  .searchpage_autogrid td {
+    font-size: 18px;
+  }
+
+
+  .searchpage_autogrid .v-grid-column-default-header-content {
+    font-weight: bold;
+    font-size: 19px;
+
+  }
+
+  .v-grid {
+    max-height: 68vh !important;
+    overflow-x: hidden !important;
+  }
+
+  .searchpage_autogrid .v-grid-header {
+    border-bottom: 1px white solid;
+  }
+
+  .reservierebutton {
+    background: gray;
+    line-height: 3;
+    height: 47px;
+    color: white;
+    font-weight: bold;
+    margin-top: 22px;
+  }
+
+  .v-grid-horizontal-scrollbar-deco {
+    display: none !important;
+  }
+
+
+  .hits {
+    color: #ECECEC;
+    position: absolute;
+    bottom: 13vh;
+    left: 48vh;
+  }
+
+
+
+  .reservnoresult {
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 43vh;
+    left: 72vh;
+    color: grey;
+  }
+
+  .searchnoresult {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ECECEC;
+    position: relative;
+    width: (-webkit-fill-available);
+    text-align: center;
+    top: -26px !important;
+  }
+
+
+  .v-grid-scroller-horizontal, .v-grid-scroller-vertical {
+   border: none !important;
+  }
+
+  .suchart {
+    position: absolute;
+    left: 36vh;
+    top: 6vh;
+    font-size: 50px;
+    font-weight: bold;
+    color: grey;
+  }
+
+  .v-grid-header-deco {
+    display: none !important;
+  }
 
 
 

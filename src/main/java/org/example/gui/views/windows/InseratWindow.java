@@ -2,7 +2,7 @@ package org.example.gui.views.windows;
 
 import com.vaadin.icons.VaadinIcons;
 import com.vaadin.ui.*;
-import org.example.process.control.exceptions.InseratControl;
+import org.example.process.control.InseratControl;
 import org.example.process.control.exceptions.RegisterException;
 import org.example.gui.views.components.MyTextField;
 import org.example.model.objects.Vertriebler;

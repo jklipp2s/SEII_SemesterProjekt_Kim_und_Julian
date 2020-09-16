@@ -1,6 +1,8 @@
-package org.example.process.control.exceptions;
+package org.example.process.control;
 import org.example.model.objects.*;
 import org.example.model.dao.AutoDAO;
+import org.example.process.control.exceptions.DatabaseException;
+import org.example.process.control.exceptions.RegisterException;
 
 import java.time.LocalDate;
 import java.util.Calendar;
