@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SEII Projekt Julian und Kim" />
-        <module name="SEII_SemesterProjekt_Kim_und_Julian" />
         <module name="carlookltd" />
+        <module name="SEII_SemesterProjekt_Kim_und_Julian" />
       </profile>
     </annotationProcessing>
   </component>
