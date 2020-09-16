@@ -32,6 +32,9 @@ public class MyUI extends UI {
         navigator.addView(Views.LOGINPAGE, LoginPage.class);
         navigator.addView(Views.REGISTERPAGE, RegisterPage.class);
         navigator.addView(Views.PROFILEPAGE, ProfilePage.class);
+        navigator.addView(Views.CONTACTPAGE, ContactPage.class);
+        navigator.addView(Views.CARPAGE, CarPage.class);
+
 
 
         getCurrent().getNavigator().navigateTo(Views.LANDINGPAGE);
