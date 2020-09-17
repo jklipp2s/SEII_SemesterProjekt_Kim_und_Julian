@@ -28,7 +28,14 @@ public class MyTextField extends HorizontalLayout {
         overLayout = new HorizontalLayout();
         this.label = label;
         label.setStyleName("textfieldicon");
-        textField.setWidth(width);
+
+        if(!width.equals("regular") && !width.equals("regularmini") ) {
+            textField.setWidth(width);
+        } else {
+            this.addStyleName(width.equals("regular") ? "notRegular" : "notRegularMinimized" );
+            textField.addStyleName(width.equals("regular") ? "notRegular" : "notRegularMinimized");
+        }
+
         textlabel = new Label(placeholder);
         textlabel.setStyleName("textfieldplaceholder");
         overLayout.addComponents(label, textlabel);

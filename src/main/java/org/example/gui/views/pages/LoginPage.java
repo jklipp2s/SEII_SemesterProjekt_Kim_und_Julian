@@ -49,12 +49,12 @@ public class LoginPage extends VerticalLayout implements View {
 
         Label emailIcon = new Label();
         emailIcon.setIcon(VaadinIcons.ENVELOPE_OPEN_O);
-        this.email = new MyTextField("450px", new TextField(), "EMAIL", emailIcon);
+        this.email = new MyTextField("regular", new TextField(), "EMAIL", emailIcon);
 
 
         Label passwordIcon = new Label();
         passwordIcon.setIcon(VaadinIcons.LOCK);
-        this.password = new MyTextField("450px", new PasswordField(), "PASSWORD", passwordIcon);
+        this.password = new MyTextField("regular", new PasswordField(), "PASSWORD", passwordIcon);
 
 
         Button login = new Button("LOGIN");
