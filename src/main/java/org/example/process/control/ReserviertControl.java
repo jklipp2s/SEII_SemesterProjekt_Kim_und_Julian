@@ -35,7 +35,7 @@ public class ReserviertControl {
             }
 
             if( lastTermin != null && lastTermin.isAfter(LocalDate.now()))
-                throw new RegisterException("Sie haben noch einen bevorstehenden Besichtiungstermin mit diesem Auto!");
+                throw new RegisterException("Sie haben noch einen bevorstehenden Besichtigungstermin mit diesem Auto!");
 
 
 
