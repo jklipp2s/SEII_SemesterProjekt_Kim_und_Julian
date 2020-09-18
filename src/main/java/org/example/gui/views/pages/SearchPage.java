@@ -64,21 +64,21 @@ public class SearchPage extends VerticalLayout implements View {
         Label m = new Label("MARKE/MODELL");
         Label flashIcon = new Label();
         flashIcon.setIcon(VaadinIcons.FLASH);
-        markeT = new MyTextField("450px", new TextField(),"Marke",  flashIcon);
+        markeT = new MyTextField("regular", new TextField(),"Marke",  flashIcon);
         VerticalLayout marke = new VerticalLayout(m, markeT);
         marke.addStyleName("ml");
 
         Label dollar = new Label();
         dollar.setIcon(VaadinIcons.DOLLAR);
         Label pr = new Label("PREIS BIS €");
-        preisT = new MyTextField("450px", new TextField(),"Verkaufspreis",  dollar);
+        preisT = new MyTextField("regular", new TextField(),"Verkaufspreis",  dollar);
         VerticalLayout preis = new VerticalLayout(pr, preisT );
         preis.addStyleName("ml");
 
         Label calendar = new Label();
         calendar.setIcon(VaadinIcons.CALENDAR);
         Label b = new Label("BAUJAHR AB");
-        baujahrT = new MyTextField("450px", new TextField(),"Baujahr",  calendar);
+        baujahrT = new MyTextField("regular", new TextField(),"Baujahr",  calendar);
         VerticalLayout baujahr = new VerticalLayout(b, baujahrT);
         baujahr.addStyleName("ml");
 
@@ -86,14 +86,14 @@ public class SearchPage extends VerticalLayout implements View {
         Label rocket = new Label();
         rocket.setIcon(VaadinIcons.ROCKET);
         Label p = new Label("MOTORISIERUNG BIS (PS)");
-        psT = new MyTextField("450px", new TextField(),"PS",  rocket);
+        psT = new MyTextField("regular", new TextField(),"PS",  rocket);
         VerticalLayout ps = new VerticalLayout(p, psT);
         ps.addStyleName("ml");
 
         Label asterisk = new Label();
         asterisk.setIcon(VaadinIcons.ASTERISK);
         Label e = new Label("EIGENSCHAFTEN");
-        eigenschaftenT = new MyTextField("450px", new TextField(),"Eigenschaften",  asterisk);
+        eigenschaftenT = new MyTextField("regular", new TextField(),"Eigenschaften",  asterisk);
         VerticalLayout eigenschaften = new VerticalLayout(e, eigenschaftenT);
         eigenschaften.addStyleName("ml");
 

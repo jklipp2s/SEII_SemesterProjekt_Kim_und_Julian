@@ -51,7 +51,7 @@ public class CarPage extends VerticalLayout implements View {
 
 
         Label header = new Label(user instanceof  Vertriebler ? "Meine Inserate" : "Meine Reservierungen");
-        header.setStyleName("tableart");
+        header.setStyleName("tableart short");
 
         if(user instanceof Kunde)
             horizontalLayout.addComponent(header);

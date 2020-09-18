@@ -45,17 +45,17 @@ public class RegisterPage extends VerticalLayout implements View {
 
         Label emailIcon = new Label();
         emailIcon.setIcon(VaadinIcons.ENVELOPE_OPEN_O);
-        MyTextField email = new MyTextField("450px", new TextField(), "EMAIL", emailIcon);
+        MyTextField email = new MyTextField("regular", new TextField(), "EMAIL", emailIcon);
 
 
         Label userIcon = new Label();
         userIcon.setIcon(VaadinIcons.USER);
-        MyTextField prename = new MyTextField("222px", new TextField(), "VORNAME", userIcon);
+        MyTextField prename = new MyTextField("regularmini", new TextField(), "VORNAME", userIcon);
         prename.addStyleName("prename");
 
         Label userIcon2 = new Label();
         userIcon2.setIcon(VaadinIcons.USERS);
-        MyTextField name = new MyTextField("222px", new TextField(), "NAME", userIcon2);
+        MyTextField name = new MyTextField("regularmini", new TextField(), "NAME", userIcon2);
         name.addStyleName("name");
 
 
@@ -63,11 +63,11 @@ public class RegisterPage extends VerticalLayout implements View {
 
         Label passwordIcon = new Label();
         passwordIcon.setIcon(VaadinIcons.LOCK);
-        MyTextField password = new MyTextField("450px", new PasswordField(), "PASSWORT", passwordIcon);
+        MyTextField password = new MyTextField("regular", new PasswordField(), "PASSWORT", passwordIcon);
 
         Label passwordIcon2 = new Label();
         passwordIcon2.setIcon(VaadinIcons.LOCK);
-        MyTextField passwordRepeat = new MyTextField("450px", new PasswordField(), "PASSWORT WIEDERHOLEN", passwordIcon2);
+        MyTextField passwordRepeat = new MyTextField("regular", new PasswordField(), "PASSWORT WIEDERHOLEN", passwordIcon2);
 
 
         HorizontalLayout radioButtonWrapper = new HorizontalLayout();
@@ -81,7 +81,7 @@ public class RegisterPage extends VerticalLayout implements View {
 
 
         radioButtonWrapper.addComponents(kunde, mitarbeiter);
-        radioButtonWrapper.setWidth("450px");
+        radioButtonWrapper.addStyleName("notRegular");
 
         kunde.setCaption("Kunde");
         kunde.setStyleName("kunde");
@@ -110,10 +110,10 @@ public class RegisterPage extends VerticalLayout implements View {
 
 
         Label errorEmail = new Label("Bitte wählen Sie eine korrekte Email!");
-        errorEmail.setStyleName("error");
+        errorEmail.setStyleName("errorf");
 
         Label errorPassword = new Label("Ihre PasswortEinträge stimmen nicht überein!");
-        errorPassword.setStyleName("error");
+        errorPassword.setStyleName("errorf");
 
 
         /**

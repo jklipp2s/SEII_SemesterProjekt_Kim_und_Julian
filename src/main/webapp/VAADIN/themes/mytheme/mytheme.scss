@@ -39,12 +39,12 @@
 
 
   .logo {
-    height: 180px;
+    height: 19.2102454642476vh;
   }
 
 
   .v-slot-header, .header {
-    height: 180px !important;
+    height: 19.2102454642476vh !important;
   }
 
 
@@ -89,9 +89,9 @@
   .homebutton, .fahrzeugebutton, .kontaktbutton, .loginbutton, .suchebutton {
     width: 100%;
     height: 100%;
-    line-height: 82px;
+    line-height: 8.751334044823906vh;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 2.134471718249733vh;
     border: orange;
   }
 
@@ -109,11 +109,11 @@
   .registerbutton {
     background: orange;
     border-radius: 2px;
-    height: 45px;
-    font-size: 20px;
-    width: 225px;
+    height: 4.8025613660619vh;
+    font-size: 2.134471718249733vh;
+    width: 22.6680896478121663vh;
     color: whitesmoke;
-    line-height: 40px;
+    line-height: 4.268943436499466vh;
     margin-left: 10vh;
   }
 
@@ -151,14 +151,17 @@
     background-color: orange;
   }
 
-  .registerpage .v-slot-footer_middle, .loginpage .v-slot-footer_middle {
+  .registerpage .v-slot-footer_middle, .loginpage .v-slot-footer_middle, .searchpage .v-slot-footer_middle {
     width: (-webkit-fill-available) !important;
     margin-top: 5vh;
   }
 
+  .searchpage .v-slot-editedBy {
+    text-align: center !important;
+  }
+
   .profilepage .v-slot-footer_middle, .landing .v-slot-footer_middle,
-  .contactpage .v-slot-footer_middle, .carpage .v-slot-footer_middle,
-  .searchpage .v-slot-footer_middle {
+  .contactpage .v-slot-footer_middle, .carpage .v-slot-footer_middle {
     width: 60% !important;
     margin-top: 5vh;
   }
@@ -185,27 +188,27 @@
 
   .welcome1 {
     color: orange;
-    font-size: 60px;
+    font-size:  6.4034151547492vh;
     font-weight: bold;
-    margin-left: 25px;
+    margin-left: 2.6680896478121663vh;
   }
 
   .welcome2 {
     color: grey;
-    font-size: 62px;
+    font-size:  6.616862326574173vh;
     font-weight: bold;
     margin-top: -11vh;
-    margin-left: 25px;
+    margin-left: 2.6680896478121663vh;
   }
 
 
   .regbutton {
     background: orange;
     border-radius: 2px;
-    height: 45px;
+    height: 4.8025613660619vh;
     color: whitesmoke;
     margin-top: -13vh;
-    margin-left: 25px;
+    margin-left: 2.6680896478121663vh;
 
   }
 
@@ -230,9 +233,9 @@
     position: relative;
     z-index: 1000;
     height: fit-content !important;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    box-shadow: 0 0 36px grey;
+    padding-top: 2.6680896478121663vh;
+    padding-bottom: 2.6680896478121663vh;
+    box-shadow: 0 0 3.84204909284952vh grey;
   }
 
   .v-slot-landingpage_middle_right, .landingpage_middle_right,
@@ -248,7 +251,7 @@
   }
 
   .upper {
-    margin-left: 25px;
+    margin-left: 2.6680896478121663vh;
   }
 
 
@@ -260,8 +263,8 @@
   .footer_fb, .footer_tw, .footer_in {
     margin-top: 7.5vh;
     background: rgba(255, 255, 255, .2);
-    width: 35px;
-    height: 35px;
+    width: 3.7353255069370332vh;
+    height: 3.7353255069370332vh;
 
     text-align: center;
     line-height: 2;
@@ -295,36 +298,45 @@
 
   // MY TEXTFIELDWITHICON
 
+  .notRegular {
+    width: 48.025613660618994vh !important;
+  }
+
+  .notRegularMinimized {
+    width: 23.394026vh !important;
+  }
+
+
   .mytextfield {
     position: relative;
   }
 
   .v-slot-textfieldicon {
     position: absolute;
-    left: 5px;
-    top: 6.5px;
+    left: 0.5336179295624333vh;
+    top:  0.6937033084311632vh;
   }
 
   .v-caption-textfieldicon {
-    font-size: 29px;
+    font-size:  3.0949839914621133vh;
     color: darkgray;
   }
 
 
   .textfieldplaceholder {
-    font-size: 20px;
+    font-size: 2.134471718249733vh;
     color: dimgray;
     position: absolute;
-    left: 45px;
-    top: 15px;
+    left: 4.8025613660619vh;
+    top: 1.6008537886873vh;
     font-weight: bold;
     cursor: text;
   }
 
   .v-textfield {
-    height: 55px;
+    height:  5.869797225186766vh;
     border-top: 0;
-    font-size: 24px;
+    font-size: 2.5613660618996796vh;
     color: rgba(0, 0, 0, 0.5);
     border-left: 0;
     border-right: 0;
@@ -336,7 +348,7 @@
 
 
   .v-textfield:focus {
-    height: 55px;
+    height:  5.869797225186766vh;
     border-top: 0;
     border-left: 0;
     border-right: 0;
@@ -348,12 +360,12 @@
 
 
   .v-slot-mytextfield {
-    max-width: 450px !important;
+    max-width:  48.025613660618994vh !important;
   }
 
   .registerpage_middle_right .v-slot {
 
-   height: 80px;
+   height:  8.537886872998932vh;
 
   }
 
@@ -373,7 +385,7 @@
 
 
   .radiobuttonwrapper {
-    font-size: 20px;
+    font-size: 2.134471718249733vh;
   }
 
   .v-slot-registerbutton {
@@ -386,9 +398,9 @@
 
 
   .v-caption-user_pic {
-    width: 250px;
-    height: 210px;
-    font-size: 149px;
+    width:  32.467532467532465vh;
+    height:  27.272727272727273vh;
+    font-size: 19.350649350649352vh;
     background: lightgrey;
     border-radius: 50%;
     text-align: center;
@@ -399,14 +411,20 @@
   }
 
   .profilepage .v-slot-centered_p {
-    height: 461px !important;
-    margin-top: 150px;
+    height: 49.19957310565635vh !important;
+    margin-top: 16.008537886873vh;
     margin-left: 27vh;
   }
 
   .profilepage .v-slot-mytextfield {
-    height: 85px !important;
+    height: 9.071504802561366vh !important;
   }
+
+
+  .carwindow {
+    min-width: 64.93506493506493vh !important;
+  }
+
 
   .v-window {
     width: fit-content;
@@ -416,7 +434,7 @@
     position: absolute;
     left: 64vh;
     top: 14vh;
-    font-size: 50px;
+    font-size: 5.336179295624333vh;
     font-weight: bold;
     color: grey;
   }
@@ -431,21 +449,21 @@
 
   .savebutton {
     line-height: 2.7;
-    height: 55px;
+    height:  5.869797225186766vh;
     background: #c6c0c0;
-    font-size: 20px;
+    font-size: 2.134471718249733vh;
     color: black;
     font-weight: bold;
   }
 
   .v-filterselect-input {
-    font-size: 20px !important;
+    font-size: 2.134471718249733vh !important;
     font-weight: bold !important;
   }
 
 
   .genderselectbutton {
-    margin-top: 34px;
+    margin-top:  3.6286019210245466vh;
   }
 
 
@@ -453,38 +471,43 @@
     position: absolute;
     z-index: 1;
     line-height: 1;
-    font-size: 15px;
+    font-size: 1.6008537886873vh;
     font-weight: bold;
     color: gray;
   }
 
 
   .margin {
-    margin-top: -12px;
+    margin-top: -1.2806830309498398vh;
   }
 
   .email_edit {
-    margin-top: -42px;
+    margin-top: -4.482390608324439vh;
   }
 
   .email {
-    margin-top: -11px;
+    margin-top: -1.1739594450373532vh;
   }
 
   .tableart {
     position: absolute;
-    left: 60vh;
     top: 10vh;
-    font-size: 50px;
+    font-size: 6.4935064935064934vh;
     font-weight: bold;
     color: grey;
   }
 
+  .long {
+    left: 67vh;
+  }
 
+  .short {
+    left: 44vh;
+  }
 
 
   .contactpage .v-slot-centered_p {
-    height: 611px !important;
+    height: 79.35064935064935vh !important;
   }
 
 
@@ -494,23 +517,23 @@
   }
 
   .fach {
-    font-size: 33px;
+    font-size: 3.52187833511206vh;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 0.21344717182497333vh;
   }
   .prof {
-    font-size: 25px;
-    margin-top: -11px;
+    font-size: 2.6680896478121663vh;
+    margin-top: -1.1739594450373532vh;
   }
 
   .sem {
-    font-size: 22px;
-    margin-top: -9px;
+    font-size:  2.3479188900747063vh;
+    margin-top: -0.96051227321238vh;
   }
 
   .kontakt {
     margin-top: 4vh;
-    font-size: 30px;
+    font-size: 3.2017075773746vh;
     line-height: 1.2;
     font-weight: bolder;
   }
@@ -525,17 +548,17 @@
   }
 
   .name1, .name2 {
-    font-size: 30px;
+    font-size:  3.2017075773746vh;
     margin-top: 4vh;
     font-weight: bold;
-    letter-spacing: 1px;
+    letter-spacing: 0.10672358591248667vh;
   }
 
   .mn1, .mn2 {
-    font-size: 21px;
+    font-size:  2.2411953041622197vh;
     width: 46vh;
     text-align: end;
-    padding: 10px;
+    padding: 1.0672358591248665vh;
     background: rgb(238, 238, 238);
   }
 
@@ -544,19 +567,19 @@
     position: absolute;
     left: 50vh;
     top: 6vh;
-    font-size: 50px;
+    font-size:  5.336179295624333vh;
     font-weight: bold;
     color: grey;
   }
 
   .v-slot-layout_contact {
-    height: 658px;
+    height: 70.22411953041622vh;
   }
 
 
 
    .v-slot-centered_p {
-    height: 665px !important;
+    height: 70.97118463180362vh !important;
     width: 100%;
   }
 
@@ -566,20 +589,20 @@
 
 
   .v-slot-carpage_middle, .contactpage .v-slot-centered_p {
-    height: 582px !important;
+    height: 62.113127001067234vh !important;
     width: 100%;
   }
 
 
   .v-slot-quad {
     background: #ECECEC;
-    width: 600px;
-    height: 400px;
+    width: 64.034151547492vh;
+    height: 42.68943436499466vh;
     display: flex;
     align-items: center;
     //justify-content: center;
     border: 1px dimgray solid;
-    box-shadow: 0 0 20px dimgrey;
+    box-shadow: 0 0 2.134471718249733vh dimgrey;
   }
 
 
@@ -592,8 +615,8 @@
 
   .quaderbutton {
     background: black;
-    width: 35px;
-    height: 35px;
+    width: 3.7353255069370332vh;
+    height: 3.7353255069370332vh;
   }
 
 
@@ -606,8 +629,8 @@
 
   .quaderbutton .v-button-wrap {
     line-height: 1.7;
-    margin-left: 40px;
-    font-size: 20px;
+    margin-left: 4.268943436499466vh;
+    font-size: 2.134471718249733vh;
     font-weight: bold;
   }
 
@@ -618,29 +641,29 @@
 
 
   .v-slot-quaderbutton + .v-spacing + .v-slot-quaderbutton {
-    margin-top: 20px;
+    margin-top: 2.134471718249733vh;
   }
 
 
   .inserierebutton {
     line-height: 2;
     background: #dadada;
-    margin-top: 10px;
+    margin-top:  1.0672358591248665vh;
   }
 
   .v-textarea {
-    margin-top: 23px;
-    font-size: 20px;
+    margin-top: 2.454642475987193vh;
+    font-size: 2.134471718249733vh;
 
   }
 
   .inserierewindow {
-    padding: 2px 40px 9px 40px;
+    padding: 0.21344717182497333vh  4.268943436499466vh 0.96051227321238vh  4.268943436499466vh;
   }
 
 
   .v-slot-carpage_middle_hitlist, .carpage_middle_hitlist {
-    height: 578px !important;
+    height: 61.68623265741729vh !important;
   }
 
 
@@ -650,24 +673,16 @@
 
   .autogrid .v-grid-column-default-header-content {
     font-weight: bold;
-    font-size: 18px;
+    font-size:  1.92102454642476vh;
   }
 
-
-  .autogrid {
-    position: fixed;
-    left: 0;
-    max-height: 665px !important;
-    overflow-x: hidden !important;
-
-  }
 
 
   .carbutton, .carbutton:hover:after {
     width: 0;
     height: 0;
     background-color: transparent;
-    font-size: 23px;
+    font-size: 2.454642475987193vh;
     color: black;
     line-height: 1 !important;
   }
@@ -680,7 +695,7 @@
 
 
   .v-slot-carpage_middle_hitlist, .carpage_middle_hitlist {
-    height: 578px !important;
+    height:  61.68623265741729vh !important;
   }
 
 
@@ -690,14 +705,14 @@
 
   .autogrid .v-grid-column-default-header-content {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 1.92102454642476vh;
   }
 
 
   .autogrid {
     position: fixed;
     left: 0;
-    max-height: 665px !important;
+    max-height:  70.97118463180362vh !important;
     overflow-x: hidden !important;
 
   }
@@ -707,7 +722,7 @@
     width: 0;
     height: 0;
     background-color: transparent;
-    font-size: 23px;
+    font-size: 2.454642475987193vh;
     color: black;
     line-height: 1 !important;
   }
@@ -719,36 +734,35 @@
 
 
   .v-filterselect-input {
-    font-size: 20px !important;
+    font-size: 2.134471718249733vh !important;
     font-weight: bold !important;
   }
 
 
   .genderselectbutton {
-    margin-top: 34px;
+    margin-top: 3.6286019210245466vh;
   }
 
 
 
   .v-datefield-button {
-    height: 55px !important;
-    font-size: 25px !important;
+    height: 5.869797225186766vh !important;
+    font-size: 2.6680896478121663vh !important;
   }
 
 
   .v-datefield-textfield {
-    height: 55px !important;
-    width: 452px !important;
-    font-size: 20px !important;
+    height:  5.869797225186766vh !important;
+    width: 48.23906083244397vh !important;
+    font-size: 2.134471718249733vh !important;
   }
 
 
 
 
   .searchpage .v-slot-centered_p {
-    background: url("img/searchpage.jpg") 0 -355px !important;
+    background: url("img/searchpage.jpg") 0 -37.886872998932766vh !important;
     background-size: cover !important;
-    //-webkit-filter: blur(1.5px) !important;
     opacity: 0.8;
 
   }
@@ -759,7 +773,7 @@
 
 
   .searchpage .ml {
-    margin: 15px 0 0 50px;
+    margin:  1.6008537886873vh 0 0  5.336179295624333vh;
   }
 
 
@@ -785,7 +799,7 @@
 
   .v-slot-searchpage_left {
     display: table-cell !important;
-    width: 550px;
+    width: 58.69797225186766vh;
     height: 100%;
     background: rgba(0, 0, 0, .8);
     font-weight: bold;
@@ -793,7 +807,9 @@
 
   }
 
-  .searchpage_autogrid, .searchpage_autogrid .v-grid-tablewrapper, .searchpage_right, .v-slot-searchpage_autogrid {
+  .searchpage_autogrid,
+  .searchpage_autogrid .v-grid-tablewrapper,
+  .searchpage_right, .v-slot-searchpage_autogrid {
     width: 100% !important;
 
   }
@@ -804,7 +820,11 @@
   }
 
 
-  .searchpage_autogrid td, .searchpage_autogrid th, .searchpage_autogrid thead, .searchpage .v-grid-tablewrapper, .searchpage_autogrid {
+  .searchpage_autogrid td,
+  .searchpage_autogrid th,
+  .searchpage_autogrid thead,
+  .searchpage .v-grid-tablewrapper,
+  .searchpage_autogrid {
 
     background: rgba(0, 0, 0, 0) !important;
     backdrop-filter: blur(2px);
@@ -817,13 +837,13 @@
   }
 
   .searchpage_autogrid td {
-    font-size: 18px;
+    font-size: 1.92102454642476vh;
   }
 
 
   .searchpage_autogrid .v-grid-column-default-header-content {
     font-weight: bold;
-    font-size: 19px;
+    font-size: 2.0277481323372464vh;
 
   }
 
@@ -839,10 +859,10 @@
   .reservierebutton {
     background: gray;
     line-height: 3;
-    height: 47px;
+    height:  6.016008537886873vh;
     color: white;
     font-weight: bold;
-    margin-top: 22px;
+    margin-top: 2.3479188900747063vh;
   }
 
   .v-grid-horizontal-scrollbar-deco {
@@ -860,7 +880,7 @@
 
 
   .reservnoresult {
-    font-size: 24px;
+    font-size: 2.5613660618996796vh;
     font-weight: bold;
     position: absolute;
     top: 43vh;
@@ -869,14 +889,16 @@
   }
 
   .searchnoresult {
-    font-size: 24px;
+    font-size: 2.5613660618996796vh;
     font-weight: bold;
     color: #ECECEC;
     position: relative;
     width: (-webkit-fill-available);
     text-align: center;
-    top: -26px !important;
+    top: -2.774813233724653vh !important;
   }
+
+
 
 
   .v-grid-scroller-horizontal, .v-grid-scroller-vertical {
@@ -887,7 +909,7 @@
     position: absolute;
     left: 36vh;
     top: 6vh;
-    font-size: 50px;
+    font-size: 5.336179295624333vh;
     font-weight: bold;
     color: grey;
   }
@@ -895,6 +917,31 @@
   .v-grid-header-deco {
     display: none !important;
   }
+
+  // ErrorMeldungen
+
+  .errorf {
+    width: 37.01298701298701vh;
+    font-size: 2.0779220779220777vh;
+    color: red;
+    line-height: 1.2;
+    height: 0px;
+  }
+
+
+  .v-slot-errorf {
+    position: relative;
+    z-index: 2;
+    height: 0px !important;
+    bottom: 0.5194805194805194vh;
+  }
+
+  .mytheme .v-Notification {
+    padding-bottom: 4.675324675324675vh;
+  }
+
+
+
 
 
 

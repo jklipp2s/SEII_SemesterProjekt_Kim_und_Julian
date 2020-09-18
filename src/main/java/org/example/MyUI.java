@@ -13,6 +13,8 @@ import org.example.gui.views.pages.*;
 import org.example.gui.views.pages.RegisterPage;
 import org.example.util.Views;
 
+import java.util.concurrent.TimeUnit;
+
 /**
  * This UI is the application entry point. A UI may either represent a browser window 
  * (or tab) or some part of a html page where a Vaadin application is embedded.
@@ -35,6 +37,21 @@ public class MyUI extends UI {
         navigator.addView(Views.CONTACTPAGE, ContactPage.class);
         navigator.addView(Views.CARPAGE, CarPage.class);
         navigator.addView(Views.SEARCHPAGE, SearchPage.class);
+
+
+        UI.getCurrent().getPage().addBrowserWindowResizeListener(e -> {
+
+            try {
+                TimeUnit.SECONDS.sleep(3);
+            } catch (InterruptedException interruptedException) {
+                interruptedException.printStackTrace();
+            }
+
+            UI.getCurrent().getPage().reload();
+        });
+
+
+
 
 
 

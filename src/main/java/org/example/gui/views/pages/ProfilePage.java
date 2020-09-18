@@ -71,7 +71,7 @@ public class ProfilePage extends VerticalLayout implements View {
     public VerticalLayout centered(User user, boolean editing) {
 
         Label userArt = new Label(user instanceof Vertriebler ? "VERTRIEB" : "KUNDE");
-        userArt.setStyleName("tableart");
+        userArt.setStyleName("tableart long");
 
 
         Label userLabel = new Label();
@@ -88,7 +88,7 @@ public class ProfilePage extends VerticalLayout implements View {
         Label regLabel = new Label("Dabei seit:");
         regLabel.addStyleName("reglabel");
 
-        MyTextField regDate = new MyTextField("450px", new TextField(), "Registrationsdatum", calendar, false);
+        MyTextField regDate = new MyTextField("regular", new TextField(), "Registrationsdatum", calendar, false);
         try {
 
             Date rdate =  RegistrierterBenutzerDAO.getInstance().fetchDate(user.getEmail());
@@ -106,7 +106,7 @@ public class ProfilePage extends VerticalLayout implements View {
 
 
         ComboBox<String> anredeSelect = new ComboBox<>();
-        anredeSelect.setWidth("450px");
+        anredeSelect.addStyleName("notRegular");
         anredeSelect.setHeight("55px");
         List<String> list = new ArrayList<>();
         list.add("Herr");
@@ -118,7 +118,7 @@ public class ProfilePage extends VerticalLayout implements View {
 
         Label anredeLabel = new Label();
         anredeLabel.setIcon(VaadinIcons.PLUS_CIRCLE_O);
-        MyTextField anrede = new MyTextField("450px", new TextField(), "Anrede", anredeLabel, editing);
+        MyTextField anrede = new MyTextField("regular", new TextField(), "Anrede", anredeLabel, editing);
 
 
         Label u1 = new Label();
@@ -127,12 +127,12 @@ public class ProfilePage extends VerticalLayout implements View {
         u2.setIcon(VaadinIcons.USER);
 
 
-        MyTextField prename = new MyTextField("450px", new TextField(), "Vorname", u1, editing);
-        MyTextField name = new MyTextField("450px", new TextField(), "Nachname", u2, editing);
+        MyTextField prename = new MyTextField("regular", new TextField(), "Vorname", u1, editing);
+        MyTextField name = new MyTextField("regular", new TextField(), "Nachname", u2, editing);
 
         Label em = new Label();
         em.setIcon(VaadinIcons.AT);
-        MyTextField email = new MyTextField("450px", new TextField(), "Email", em, false);
+        MyTextField email = new MyTextField("regular", new TextField(), "Email", em, false);
         email.setPlaceholder(user.getEmail());
         email.addStyleName(editing ? "right_edit" : "right");
         email.addStyleName(editing ? "email_edit" : "email");

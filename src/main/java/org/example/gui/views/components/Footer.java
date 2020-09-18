@@ -5,6 +5,7 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 import org.example.gui.views.pages.LoginPage;
 import org.example.gui.views.pages.RegisterPage;
+import org.example.gui.views.pages.SearchPage;
 
 
 public class Footer extends HorizontalLayout {
@@ -19,7 +20,6 @@ public class Footer extends HorizontalLayout {
         left.addStyleName("footer_left");
 
 
-
         Label fb = new Label("FB");
 
         fb.setStyleName("footer_fb");
@@ -29,7 +29,7 @@ public class Footer extends HorizontalLayout {
         in.setStyleName("footer_in");
 
 
-        left.addComponents(fb,tw,in);
+        left.addComponents(fb, tw, in);
 
         HorizontalLayout middle = new HorizontalLayout();
         middle.addStyleName("footer_middle");
@@ -40,11 +40,15 @@ public class Footer extends HorizontalLayout {
         middle.addComponent(editedBy);
 
 
-        this.addComponents(left,middle);
+        if (UI.getCurrent().getNavigator().getCurrentView().getClass().equals(SearchPage.class))
+            this.addComponents(middle);
+        else
+            this.addComponents(left, middle);
 
-        if(!(UI.getCurrent().getNavigator().getCurrentView().getClass().equals(RegisterPage.class) ||
-                UI.getCurrent().getNavigator().getCurrentView().getClass().equals(LoginPage.class)))
-            this.addComponent(right);
+        if (!UI.getCurrent().getNavigator().getCurrentView().getClass().equals(RegisterPage.class) &&
+                !UI.getCurrent().getNavigator().getCurrentView().getClass().equals(LoginPage.class) &&
+                !UI.getCurrent().getNavigator().getCurrentView().getClass().equals(SearchPage.class))
+        this.addComponent(right);
 
     }
 

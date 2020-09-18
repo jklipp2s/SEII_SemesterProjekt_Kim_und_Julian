@@ -19,9 +19,9 @@ public class SuccessWindow extends Window {
         this.setCaption(cls.getSimpleName().equals("RegisterPage") ? " Welcome" : " Success");
         this.setIcon(cls.getSimpleName().equals("RegisterPage") ?  VaadinIcons.GROUP : VaadinIcons.CAR);
 
-
         VerticalLayout verticalLayout = new VerticalLayout();
-        Label text = new Label(cls.getSimpleName().equals("RegisterPage") ? "Willkommen " + name + "!" : name + " erfolgreich registriert!"  );
+        Label text = new Label(cls.getSimpleName().equals("RegisterPage") ? "Willkommen " + name + "!" :
+                cls.getSimpleName().equals("CarWindow") ? name + " erfolgreich reserviert!" : name + " erfolgreich registriert!"  );
         Button button = new Button("Ok");
 
         verticalLayout.addComponents(text, button);
