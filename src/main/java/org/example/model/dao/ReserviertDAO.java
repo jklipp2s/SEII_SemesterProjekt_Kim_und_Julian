@@ -93,6 +93,35 @@ public class ReserviertDAO extends AbstractDAO {
         return resultList;
     }
 
+    public Date getLatestTermin(String email, String fin) throws DatabaseException {
+        DatabaseConnection.getInstance().openConnection();
+        ResultSet resultSet = null;
+        String sqlBefehl = "SELECT max(besichtigungsdatum) FROM " + table + " WHERE kunde = ? " +
+                "AND fin = ?";
+        PreparedStatement statement = getPreparedStatement(sqlBefehl);
+        Date result = null;
+
+        try {
+            statement.setString(1, email);
+            statement.setString(2, fin);
+
+            resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                result = resultSet.getDate(1);
+            }
+
+
+        } catch (SQLException ex) {
+            Logger.getLogger(RegistrierterBenutzerDAO.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println(sqlBefehl);
+        } finally {
+            DatabaseConnection.getInstance().closeConnection();
+        }
+
+        return result;
+    }
+
 
 
 

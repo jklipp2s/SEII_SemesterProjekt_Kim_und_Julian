@@ -4,6 +4,8 @@ import com.vaadin.icons.VaadinIcons;
 import com.vaadin.shared.ui.ContentMode;
 import com.vaadin.ui.*;
 import org.example.model.objects.*;
+import org.example.process.control.ReserviertControl;
+import org.example.process.control.exceptions.DatabaseException;
 import org.example.util.Roles;
 
 
@@ -46,6 +48,23 @@ public class CarWindow extends Window {
             verticalLayout.addComponents(termin, reserviereButton);
 
             verticalLayout.setComponentAlignment(reserviereButton, Alignment.MIDDLE_CENTER);
+
+
+            reserviereButton.addClickListener(clickEvent -> {
+                try {
+                    UI ui = UI.getCurrent();
+                    Kunde kunde = (Kunde) UI.getCurrent().getSession().getAttribute(Roles.CURRENT_USER);
+
+                    System.out.println(kunde.getEmail());
+
+                    ReserviertControl.reserviere(auto, kunde ,termin.getValue());
+                    this.close();
+                    ui.addWindow(new SuccessWindow(this.getClass(), auto.getMarke()));
+
+                } catch (DatabaseException e) {
+                    Notification.show(null,e.getReason(), Notification.Type.HUMANIZED_MESSAGE);
+                }
+            });
 
 
         }

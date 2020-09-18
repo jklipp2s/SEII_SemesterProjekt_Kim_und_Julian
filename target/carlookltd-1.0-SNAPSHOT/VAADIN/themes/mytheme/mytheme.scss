@@ -151,14 +151,17 @@
     background-color: orange;
   }
 
-  .registerpage .v-slot-footer_middle, .loginpage .v-slot-footer_middle {
+  .registerpage .v-slot-footer_middle, .loginpage .v-slot-footer_middle, .searchpage .v-slot-footer_middle {
     width: (-webkit-fill-available) !important;
     margin-top: 5vh;
   }
 
+  .searchpage .v-slot-editedBy {
+    text-align: center !important;
+  }
+
   .profilepage .v-slot-footer_middle, .landing .v-slot-footer_middle,
-  .contactpage .v-slot-footer_middle, .carpage .v-slot-footer_middle,
-  .searchpage .v-slot-footer_middle {
+  .contactpage .v-slot-footer_middle, .carpage .v-slot-footer_middle {
     width: 60% !important;
     margin-top: 5vh;
   }
@@ -804,7 +807,9 @@
 
   }
 
-  .searchpage_autogrid, .searchpage_autogrid .v-grid-tablewrapper, .searchpage_right, .v-slot-searchpage_autogrid {
+  .searchpage_autogrid,
+  .searchpage_autogrid .v-grid-tablewrapper,
+  .searchpage_right, .v-slot-searchpage_autogrid {
     width: 100% !important;
 
   }
@@ -815,7 +820,11 @@
   }
 
 
-  .searchpage_autogrid td, .searchpage_autogrid th, .searchpage_autogrid thead, .searchpage .v-grid-tablewrapper, .searchpage_autogrid {
+  .searchpage_autogrid td,
+  .searchpage_autogrid th,
+  .searchpage_autogrid thead,
+  .searchpage .v-grid-tablewrapper,
+  .searchpage_autogrid {
 
     background: rgba(0, 0, 0, 0) !important;
     backdrop-filter: blur(2px);
@@ -850,7 +859,7 @@
   .reservierebutton {
     background: gray;
     line-height: 3;
-    height:  5.016008537886873vh;
+    height:  6.016008537886873vh;
     color: white;
     font-weight: bold;
     margin-top: 2.3479188900747063vh;
@@ -888,6 +897,8 @@
     text-align: center;
     top: -2.774813233724653vh !important;
   }
+
+
 
 
   .v-grid-scroller-horizontal, .v-grid-scroller-vertical {
