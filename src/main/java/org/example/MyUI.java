@@ -39,16 +39,7 @@ public class MyUI extends UI {
         navigator.addView(Views.SEARCHPAGE, SearchPage.class);
 
 
-        UI.getCurrent().getPage().addBrowserWindowResizeListener(e -> {
 
-            try {
-                TimeUnit.SECONDS.sleep(3);
-            } catch (InterruptedException interruptedException) {
-                interruptedException.printStackTrace();
-            }
-
-            UI.getCurrent().getPage().reload();
-        });
 
 
 
