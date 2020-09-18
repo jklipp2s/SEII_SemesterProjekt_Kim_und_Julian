@@ -169,15 +169,18 @@ public class SearchPage extends VerticalLayout implements View {
             Notification.show(null, e.getReason(), Notification.Type.WARNING_MESSAGE);
         }
 
-        if(res.size() == 0) {
+        if(res == null || res.size() == 0) {
             right.addComponent(noResult);
         } else {
             right.removeComponent(noResult);
         }
 
-        hits.setValue(res.size() + "  Treffer");
-        autoGrid.setItems(res);
-        autoGrid.setHeightByRows(res.size() > 0 ? res.size() : 1);
+        if(res != null) {
+            hits.setValue(res.size() + "  Treffer");
+            autoGrid.setItems(res);
+            autoGrid.setHeightByRows(res.size() > 0 ? res.size() : 1);
+        }
+
 
     };
 
